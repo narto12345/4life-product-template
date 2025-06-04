@@ -193,23 +193,38 @@ img {
     background-image: linear-gradient(to bottom, transparent 50%, var(--primary) 0%), url(../img/transfer.jpg);
     background-position: 45% 0%;
     background-repeat: repeat, no-repeat;
-    /* margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding-bottom: 3rem; */
     background-size: 100%, 50rem;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
     .about-product {
-        background-position: 58% 230%;
-        background-size: 100%, 90rem;
+        background-image: linear-gradient(to left, transparent 50%, var(--primary) 0%), url(../img/transfer.jpg);
+        background-position: 100% 78%;
+        background-size: 100%, 73rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .about-product {
+        background-image: linear-gradient(to left, transparent 50%, var(--primary) 0%), url(../img/transfer.jpg);
+        background-position: 100% 60%;
+        background-size: 100%, 80rem;
     }
 }
 
 .about-product-grid {
     display: grid;
-    grid-template-rows: 40rem 40rem;
+    grid-template-rows: repeat(2, 40rem);
     row-gap: var(--separation);
+}
+
+@media (min-width: 768px) {
+    .about-product-grid {
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .text-about-product {
