@@ -58,6 +58,12 @@ h3 {
     color: var(--primary);
 }
 
+@media (min-width: 768px) {
+    h3 {
+        font-size: 2rem;
+    }
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -73,6 +79,7 @@ img {
 .degraded {
     color: transparent;
     background: linear-gradient(to right, var(--primary) 0%, var(--gray) 70%);
+    -webkit-background-clip: text;
     background-clip: text;
 }
 
@@ -171,7 +178,6 @@ img {
         width: 25%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
         text-align: center;
         padding: 2rem;
@@ -180,4 +186,42 @@ img {
     .data-section article p {
         min-height: 80px;
     }
+}
+
+/* Sobre Transfer factor */
+.about-product {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primary) 0%), url(../img/transfer.jpg);
+    background-position: 45% 0%;
+    background-repeat: repeat, no-repeat;
+    /* margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 3rem; */
+    background-size: 100%, 50rem;
+}
+
+@media (min-width: 768px) {
+    .about-product {
+        background-position: 58% 230%;
+        background-size: 100%, 90rem;
+    }
+}
+
+.about-product-grid {
+    display: grid;
+    grid-template-rows: 40rem 40rem;
+    row-gap: var(--separation);
+}
+
+.text-about-product {
+    grid-row: 2 / 3;
+    color: var(--white);
+}
+
+.text-about-product h2 {
+    font-size: 4rem;
+}
+
+.text-about-product p {
+    font-size: 2rem;
+    line-height: 2;
 }
